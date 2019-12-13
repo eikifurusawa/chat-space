@@ -1,0 +1,30 @@
+.main
+  .main__header
+    .main__header__left-box
+      %h2.main__header__left-box__current-group
+        a
+      %ul.main__header__left-box__member-list
+        Member：Eiki
+
+    .main__header__right-box
+      = link_to "#" do
+        .main__header__right-box__edit-btn Edit
+  
+  .main__messages
+    .main__messages__message
+      .main__messages__message__upper
+        .main__messages__message__upper__name enkm
+        .main__messages__message__upper__date 2019.12/03
+
+      .main__messages__message__lower
+        .main__messages__message__lower__content ひまわり
+
+  .main__form
+    .main__form__input type a message
+    %label{class: "input-box__image"}
+      = icon('fas', 'image',class: 'i')
+      %input{type: "file",class: "sample"}
+    -# .main__form__text
+    .main__form__send-btn Send
+
+  
