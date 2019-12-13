@@ -1,9 +1,9 @@
 .side
   .side__header
     .side__header__box
-      %p.side__header__box__name Eiki
-        
-      %p.side__header__box__menu 
+      %p.side__header__box__name
+        = current_user.name
+      %p.side__header__box__menu
         = link_to "#" do
           %i.fas.fa-user-edit.fa-fw
         = link_to "#" do
@@ -12,6 +12,6 @@
          
   .side__groups
     .side__groups__group
-      = link_to "#" do
+      = link_to edit_user_path(current_user) do 
         %p.side__groups__group__name E
         %p.side__groups__group__message まだメッセージがありません
