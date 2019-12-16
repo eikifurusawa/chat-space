@@ -84,6 +84,7 @@
       }
     }
   }
+  
   &__form {
     background-color: #d2d2d2;
     color: black;
@@ -93,47 +94,44 @@
     bottom: 0;
     display: flex;
     
-    
-    
     &__input {
       height: 50px;
-      width: 500px;
+      width: 900px;
       background-color: white;
       border: none;
       padding: 13px 10px;
       color: #434A54;
       font-size: 16px;
-      position: relative;
       
-      
-
     }
-    &__text {
-      font-size: 25px;
-      padding: 10px 15px;
-      background-color: white;
-      position: absolute;
-      left: 475px;
 
-    }
+    // &__text {
+    //   font-size: 25px;
+    //   padding: 10px 15px;
+    //   background-color: white;
+    //   position: absolute;
+    //   left: 475px;
+    // }
+
     &__send-btn {
       background-color: #38AEF0;
-      border: none;
+      height: 50px;
+      width: 90px;
       color: #fff;
       font-size: 16px;
-      height: 50px;
+      border: none;
       margin-left: 30px;
       padding: 15px 30px;
-
+      text-decoration: none;
+      
     }
   }
 }
 .input-box__image {
   background-color: white;
-  padding: 15px;
+  padding: 15px 10px 0px 0px;
   font-size: 23px;
 }
 .sample {
   display: none;
 }
-

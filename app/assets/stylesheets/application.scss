@@ -2,9 +2,9 @@
 @import "config/colors";
 @import "font-awesome-sprockets";
 @import "./font-awesome";
-@import"./messages";
 @import"./sidebar";
 @import"./main";
 @import "modules/user";
-@import "./messages.scss";
 @import "modules/flash";
+@import "modules/group";
+@import "messages/messages.scss";

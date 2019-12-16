@@ -17,7 +17,7 @@
         .main__messages__message__upper__date 2019.12/03
 
       .main__messages__message__lower
-        .main__messages__message__lower__content ひまわり
+        .main__messages__message__lower__content 
 
   .main__form
     .main__form__input type a message
@@ -25,6 +25,7 @@
       = icon('fas', 'image',class: 'i')
       %input{type: "file",class: "sample"}
     -# .main__form__text
-    .main__form__send-btn Send
+    = link_to "#" do
+      .main__form__send-btn Send
 
   
