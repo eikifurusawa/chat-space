@@ -86,44 +86,59 @@
   }
   
   &__form {
-    background-color: #d2d2d2;
-    color: black;
-    height: 90px;
-    width: calc(100vw - 300px);
-    padding: 20px 40px 20px 40px;
-    bottom: 0;
-    display: flex;
     
-    &__input {
-      height: 50px;
-      width: 900px;
-      background-color: white;
-      border: none;
-      padding: 13px 10px;
-      color: #434A54;
-      font-size: 16px;
-      
-    }
+    .new_message {
+      background-color: #d2d2d2;
+      color: black;
+      height: 90px;
+      width: calc(100vw - 300px);
+      padding: 20px 40px 20px 40px;
+      bottom: 0;
+      display: flex;
+    
+      &__input {
+        height: 100%;
+        width: 100%;
+        background-color: white;
+        border: none;
+        // padding: 13px 10px;
+        color: #434A54;
+        font-size: 23px;
+        position: relative;
+        &__image{
+          position: absolute;
+          top: 13px;
+          right: 10px;
+        }
+        &__text{
+          height: 100%;
+          width: 100%;
+          border-style: none;
+          padding-left: 10px;
+          font-size: 15px;
+        }
+      }
 
-    // &__text {
-    //   font-size: 25px;
-    //   padding: 10px 15px;
-    //   background-color: white;
-    //   position: absolute;
-    //   left: 475px;
-    // }
+      // &__text {
+      //   font-size: 25px;
+      //   padding: 10px 15px;
+      //   background-color: white;
+      //   position: absolute;
+      //   left: 475px;
+      // }
 
-    &__send-btn {
-      background-color: #38AEF0;
-      height: 50px;
-      width: 90px;
-      color: #fff;
-      font-size: 16px;
-      border: none;
-      margin-left: 30px;
-      padding: 15px 30px;
-      text-decoration: none;
-      
+      &__send-btn {
+        background-color: #38AEF0;
+        height: 50px;
+        width: 90px;
+        color: #fff;
+        font-size: 16px;
+        border: none;
+        margin-left: 30px;
+        padding: 15px 30px;
+        text-decoration: none;
+        
+      }
     }
   }
 }
@@ -133,5 +148,8 @@
   font-size: 23px;
 }
 .sample {
+  display: none;
+}
+.hidden{
   display: none;
 }
