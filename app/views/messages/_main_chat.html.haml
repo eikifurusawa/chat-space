@@ -4,13 +4,16 @@
       %h2.main__header__left-box__current-group
         a
       %ul.main__header__left-box__member-list
-        Member：Eiki
+        Member
+        - @group.group_users.each do |group_user|
+          = group_user.user.name
 
     .main__header__right-box
-      = link_to "#" do
+      = link_to edit_group_path(@group) do
         .main__header__right-box__edit-btn Edit
   
   .main__messages
+    = render @messages
     .main__messages__message
       .main__messages__message__upper
         .main__messages__message__upper__name enkm
@@ -20,12 +23,12 @@
         .main__messages__message__lower__content 
 
   .main__form
-    .main__form__input type a message
-    %label{class: "input-box__image"}
-      = icon('fas', 'image',class: 'i')
-      %input{type: "file",class: "sample"}
-    -# .main__form__text
-    = link_to "#" do
-      .main__form__send-btn Send
+    = form_for [@group, @message] do |f|
+      .new_message__input
+        = f.text_field :content, class: 'new_message__input__text', placeholder: 'type a message'
+        = f.label :image, class: 'new_message__input__image' do
+          = icon 'fas', 'image', class: 'icon'
+        = f.file_field :image, class: 'hidden'
+      = f.submit 'Send', class: 'new_message__send-btn'
 
   
