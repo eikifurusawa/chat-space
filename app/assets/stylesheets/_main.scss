@@ -69,14 +69,13 @@
         &__date {
           font-size: 12px;
           color: #999999;
-          margin-top: 4px 10px;
+          margin: 3px 10px;
         }
       }
     
       &__lower {
-        font-size: 14px;
-        color: #434A54;
-        padding: 12px 0px 46px;
+        ffont-size: 16px;
+          color: #333333;
         &__content {
           margin-top: 10px;
 
@@ -118,14 +117,6 @@
           font-size: 15px;
         }
       }
-
-      // &__text {
-      //   font-size: 25px;
-      //   padding: 10px 15px;
-      //   background-color: white;
-      //   position: absolute;
-      //   left: 475px;
-      // }
 
       &__send-btn {
         background-color: #38AEF0;

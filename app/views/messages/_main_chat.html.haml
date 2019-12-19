@@ -14,13 +14,13 @@
   
   .main__messages
     = render @messages
-    .main__messages__message
-      .main__messages__message__upper
-        .main__messages__message__upper__name enkm
-        .main__messages__message__upper__date 2019.12/03
+    -# .main__messages__message
+    -#   .main__messages__message__upper
+    -#     .main__messages__message__upper__name enkm
+    -#     .main__messages__message__upper__date 2019.12/03
 
-      .main__messages__message__lower
-        .main__messages__message__lower__content 
+    -#   .main__messages__message__lower
+    -#     .main__messages__message__lower__content
 
   .main__form
     = form_for [@group, @message] do |f|
