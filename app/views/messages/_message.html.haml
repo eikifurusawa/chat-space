@@ -6,14 +6,6 @@
       = message.created_at.strftime("%Y/%m/%d %H:%M")
   .main__messages__message__lower
     - if message.content.present?
-      %p.main__messages__message__lower__content
+      .main__messages__message__lower__content
         = message.content
     = image_tag message.image.url, class: 'lower-message__image' if message.image.present?
-
--# .main__messages__message
--#       .main__messages__message__upper
--#         .main__messages__message__upper__name enkm
--#         .main__messages__message__upper__date 2019.12/03
-
--#       .main__messages__message__lower
--#         .main__messages__message__lower__content

@@ -1,12 +1,12 @@
 .main
   .main__header
     .main__header__left-box
-      %h2.main__header__left-box__current-group
+      .main__header__left-box__current-group
         a
-      %ul.main__header__left-box__member-list
-        Member
-        - @group.group_users.each do |group_user|
-          = group_user.user.name
+      .main__header__left-box__member-list
+        Member：
+        - @group.users.each do |user|
+          = user.name
 
     .main__header__right-box
       = link_to edit_group_path(@group) do
@@ -14,13 +14,6 @@
   
   .main__messages
     = render @messages
-    -# .main__messages__message
-    -#   .main__messages__message__upper
-    -#     .main__messages__message__upper__name enkm
-    -#     .main__messages__message__upper__date 2019.12/03
-
-    -#   .main__messages__message__lower
-    -#     .main__messages__message__lower__content
 
   .main__form
     = form_for [@group, @message] do |f|
