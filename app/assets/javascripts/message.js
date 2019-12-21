@@ -5,34 +5,34 @@ $(function(){
                     <div class="main__messages__message__upper">
                         <div class="main__messages__message__upper__name">
                           ${message.user_name}
-                        </div>
+                         </div>
                             <div class="main__messages__message__upper__date">
                               ${message.created_at}
                             </div>
-                  </div>
-                <div class="main__messages__message__lower">
-              <p class="main__messages__message__lower__content">
-                ${message.content}
-            </p>
-          <img src="${message.image}">
-        </div>
-      </div>`
+                          </div>
+                        <div class="main__messages__message__lower">
+                      <p class="main__messages__message__lower__content">
+                        ${message.content}
+                      </p>
+              <img src="${message.image}">
+            </div>
+          </div>`
     }else{
         var html = `<div class="main__messages__message" data-message-id="${message.id}">
-                    <div class="main__messages__message__upper">
-                        <div class="main__messages__message__upper__name">
+                       <div class="main__messages__message__upper">
+                          <div class="main__messages__message__upper__name">
                           ${message.user_name}
-                        </div>
+                          </div>
                             <div class="main__messages__message__upper__date">
                               ${message.created_at}
                             </div>
-                  </div>
-                <div class="main__messages__message__lower">
-              <p class="main__messages__message__lower__content">
-                ${message.content}
-            </p>
-        </div>
-      </div>`
+                    </div>
+                  <div class="main__messages__message__lower">
+                <p class="main__messages__message__lower__content">
+                  ${message.content}
+                </p>
+              </div>
+            </div>`
     }
     
     return html;
@@ -44,7 +44,6 @@ $(function(){
     // console.logを用いてイベント発火しているか確認
     var formData = new FormData(this);
     var url = $(this).attr('action');
-    console.log(url);
     $.ajax({
       url: url,
       type: "POST",
