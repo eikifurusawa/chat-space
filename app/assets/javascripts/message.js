@@ -110,8 +110,7 @@ $(function(){
             //メッセージが入ったHTMLに、入れ物ごと追加
             $('.main__messages').append(insertHTML);
             $('.main__messages').animate({ scrollTop: $('.main__messages')[0].scrollHeight});
-            $("#new_message")[0].reset();
-            $(".form__submit").prop("disabled", false);
+            
           }
         })
         .fail(function(){
