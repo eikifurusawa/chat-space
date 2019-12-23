@@ -1,5 +1,4 @@
 $(function(){
-  // last_message_id = $('.message:last').data("message-id");
 
   function buildHTML(message){
     if (message.content && message.image) {
@@ -58,27 +57,19 @@ $(function(){
   }
 
   $('#new_message').on('submit', function(e){
-    // console.logを用いてイベント発火しているか確認
-    var formData = new FormData(this);
-    var url = $(this).attr('action');
-    $.ajax({
-      url: url,
-      type: "POST",
-      data: formData,
-      dataType: 'json',
-      processData: false,
-      contentType: false
-    })
-    .done(function(data){
-      var html = buildHTML(data);
-      $('.main__messages').append(html);
-      $('.main__messages').animate({ scrollTop: $('.main__messages')[0].scrollHeight});
-      $('#new_message')[0].reset();
-      $(".new_message__send-btn").prop("disabled", false);
-    })
-    .fail(function(){
-      alert("メッセージ送信に失敗しました");
-    });
+      e.preventDefault()
+      // console.logを用いてイベント発火しているか確認
+      var formData = new FormData(this);
+      var url = $(this).attr('action');
+      
+      $.ajax({
+        url: url,
+        type: "POST",
+        data: formData,
+        dataType: 'json',
+        processData: false,
+        contentType: false
+      })
       
       .done(function(data){
         var html = buildHTML(data);
@@ -97,7 +88,7 @@ $(function(){
         
         //カスタムデータ属性を利用し、ブラウザに表示されている最新メッセージのidを取得
         last_message_id = $('.main__messages__message:last').data("message-id");
-      console.log(last_message_id)
+      
         $.ajax({
             //ルーティングで設定した通り/groups/id番号/api/messagesとなるよう文字列を書く
             url: "api/messages",
