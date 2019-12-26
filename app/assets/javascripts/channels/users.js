@@ -35,7 +35,7 @@ function addMember(userId) {
   })
   .done(function(users) {
     
-    $(".chat-group-form__input").empty();
+    $("#user-search-result").empty();
 
     if (users.length !== 0) {
       users.forEach(function(user) {
